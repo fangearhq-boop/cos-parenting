@@ -1,0 +1,74 @@
+# COS Parenting — Niche Configuration
+# This file is read by the shared engine at _engine/SKILL.md
+
+brand_name: "COS Parenting"
+brand_short: "COSP"
+content_prefix: "parenting-content"
+parent_brand: "FanGear HQ"
+
+# Photo sourcing
+photo_source: "gemini"
+# gemini = AI-generated images via Google Gemini API
+#   - Requires GEMINI_API_KEY environment variable
+#   - Image concepts use detailed visual prompts instead of search terms
+#   - See gemini_config below for mode and model settings
+
+# Gemini image generation settings
+gemini_config:
+  mode: "base_only"                    # "base_only" or "complete"
+  model: "gemini-2.5-flash-image"      # or "gemini-3-pro-image-preview" for higher quality
+
+# Canva integration
+canva_brand_kit_id: "kAHCKfCZgk0"
+
+# Content pillars
+content_pillars:
+  - name: "Local News"
+    description: "Colorado Springs school districts, city government, family-impacting local news"
+    target_per_day: "1-2 stories/day"
+  - name: "Local Events"
+    description: "Family events, activities, seasonal things to do in COS"
+    target_per_day: "1-2 stories/day"
+  - name: "National Parenting"
+    description: "Studies, health guidelines, product recalls, trending parenting news"
+    target_per_day: "1-2 stories/day"
+  - name: "Evergreen"
+    description: "Best playgrounds, restaurant guides, resource lists, seasonal guides"
+    target_per_day: "0-1 stories/day"
+  - name: "Humor"
+    description: "Relatable parenting moments, funny data, community engagement posts"
+    target_per_day: "0-1 stories/day"
+
+# Publishing
+platforms:
+  - x_twitter
+  - facebook
+timezone: "MT"
+default_schedule:
+  - time: "8:00 AM"
+    content_type: "Morning school/local news"
+  - time: "10:00 AM"
+    content_type: "Event spotlight / national parenting"
+  - time: "12:00 PM"
+    content_type: "Midday engagement / humor"
+  - time: "3:00 PM"
+    content_type: "After-school activities / events"
+  - time: "5:00 PM"
+    content_type: "Evening family content"
+  - time: "8:00 PM"
+    content_type: "Recap / weekend preview"
+
+# Article config
+article_word_count_min: 500
+article_word_count_max: 1000
+article_has_quick_reference: true
+
+# GitHub Pages
+github_pages_url: ""
+github_repo: ""
+
+# Fact-check claim types
+claim_priority_labels:
+  1: "Dates, times, locations, prices, age ranges — most error-prone"
+  2: "School districts, statistics, study findings"
+  3: "General claims, recommendations"
