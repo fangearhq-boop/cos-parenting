@@ -30,6 +30,8 @@ desktop.ini
 **/secrets*
 **/*api-key*
 **/*apikey*
+.gemini-key
+**/.gemini-key
 
 # Dropbox conflicts
 *conflicted copy*

@@ -2,6 +2,9 @@
 """
 Generate all 14 final composite images for COS Parenting 2026-02-23.
 Uses the FanGear HQ compositor script with brand fonts and colors.
+
+Now uses single 4:5 vertical base images per story (generated natively at 1080x1350).
+Both X and Facebook composites use the same base image.
 """
 import os
 import sys
@@ -30,73 +33,74 @@ GOLD = "#F4C542"
 CORAL = "#FF6F61"
 
 # All 14 images: (story, platform, base_filename, headline, subtitle, subtitle_color)
+# Both X and FB now use the same 4:5 vertical base image per story
 COMPOSITES = [
-    # Story 1 — Childcare Crisis (use v2 images)
-    (1, "x", "COS-Parenting-Story1-X-v2-20260223.png",
+    # Story 1 — Childcare Crisis
+    (1, "x", "COS-Parenting-Story1-social-20260223.png",
      "Childcare Crisis: Zoning Fast-Track Hits Neighborhoods",
      "47K kids, 18K spots. City Council moves on zoning changes.",
      GOLD),
-    (1, "facebook", "COS-Parenting-Story1-Facebook-v2-20260223.png",
+    (1, "facebook", "COS-Parenting-Story1-social-20260223.png",
      "Childcare Crisis: Zoning Fast-Track Hits Neighborhoods",
      "47K kids, 18K spots. City Council moves on zoning changes.",
      GOLD),
 
     # Story 2 — Safety Alert (coral subtitle for urgency)
-    (2, "x", "COS-Parenting-Story2-X-20260223.png",
+    (2, "x", "COS-Parenting-Story2-social-20260223.png",
      "Safety Alert: Baby Products Recalled NOW",
      "Bath seats, walkers, loungers. Check your home today.",
      CORAL),
-    (2, "facebook", "COS-Parenting-Story2-Facebook-20260223.png",
+    (2, "facebook", "COS-Parenting-Story2-social-20260223.png",
      "Safety Alert: Baby Products Recalled NOW",
      "Bath seats, walkers, loungers. Check your home today.",
      CORAL),
 
     # Story 3 — Spring Break
-    (3, "x", "COS-Parenting-Story3-X-20260223.png",
+    (3, "x", "COS-Parenting-Story3-social-20260223.png",
      "Spring Break 2026: Every District, Different Dates",
      "D49, D20, D11, FFC — your complete planning guide.",
      GOLD),
-    (3, "facebook", "COS-Parenting-Story3-Facebook-20260223.png",
+    (3, "facebook", "COS-Parenting-Story3-social-20260223.png",
      "Spring Break 2026: Every District, Different Dates",
      "D49, D20, D11, FFC — your complete planning guide.",
      GOLD),
 
     # Story 4 — Teen Sleep
-    (4, "x", "COS-Parenting-Story4-X-20260223.png",
+    (4, "x", "COS-Parenting-Story4-social-20260223.png",
      "Let Them Sleep: Weekend Rest Cuts Teen Depression 41%",
      "New study says sleeping in on weekends protects mental health.",
      GOLD),
-    (4, "facebook", "COS-Parenting-Story4-Facebook-20260223.png",
+    (4, "facebook", "COS-Parenting-Story4-social-20260223.png",
      "Let Them Sleep: Weekend Rest Cuts Teen Depression 41%",
      "New study says sleeping in on weekends protects mental health.",
      GOLD),
 
     # Story 5 — D20 Job Fair + D11 STEM
-    (5, "x", "COS-Parenting-Story5-X-20260223.png",
+    (5, "x", "COS-Parenting-Story5-social-20260223.png",
      "D20 Job Fair Saturday + D11 STEM Challenge",
      "Feb 28 at Liberty HS, 9 AM. STEM runs through April.",
      GOLD),
-    (5, "facebook", "COS-Parenting-Story5-Facebook-20260223.png",
+    (5, "facebook", "COS-Parenting-Story5-social-20260223.png",
      "D20 Job Fair Saturday + D11 STEM Challenge",
      "Feb 28 at Liberty HS, 9 AM. STEM runs through April.",
      GOLD),
 
-    # Story 6 — Starsmore + Plunge (use v2 images)
-    (6, "x", "COS-Parenting-Story6-X-v2-20260223.png",
+    # Story 6 — Starsmore + Plunge
+    (6, "x", "COS-Parenting-Story6-social-20260223.png",
      "Family Day at Starsmore + Plunge Coming Up",
      "Free nature fun Feb 28. Special Olympics 5K March 7.",
      GOLD),
-    (6, "facebook", "COS-Parenting-Story6-Facebook-v2-20260223.png",
+    (6, "facebook", "COS-Parenting-Story6-social-20260223.png",
      "Family Day at Starsmore + Plunge Coming Up",
      "Free nature fun Feb 28. Special Olympics 5K March 7.",
      GOLD),
 
     # Story 7 — Humor: 5 Stages
-    (7, "x", "COS-Parenting-Story7-X-20260223.png",
+    (7, "x", "COS-Parenting-Story7-social-20260223.png",
      "The 5 Stages of Planning COS Spring Break",
      "When every district has different dates...",
      GOLD),
-    (7, "facebook", "COS-Parenting-Story7-Facebook-20260223.png",
+    (7, "facebook", "COS-Parenting-Story7-social-20260223.png",
      "The 5 Stages of Planning COS Spring Break",
      "When every district has different dates...",
      GOLD),
