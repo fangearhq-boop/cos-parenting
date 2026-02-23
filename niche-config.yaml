@@ -64,8 +64,8 @@ article_word_count_max: 1000
 article_has_quick_reference: true
 
 # GitHub Pages
-github_pages_url: ""
-github_repo: ""
+github_pages_url: "https://fangearhq-boop.github.io/cos-parenting"
+github_repo: "fangearhq-boop/cos-parenting"
 
 # Fact-check claim types
 claim_priority_labels:
